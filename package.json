@@ -1,0 +1,11 @@
+{
+  "name": "hearthstone-mean",
+  "version": "1.0.0",
+  "description": "Hearthstone MEAN App (Learning)",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Marriner (amarriner@amarriner.com)",
+  "license": "MIT"
+}
