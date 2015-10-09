@@ -15,8 +15,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "public/libs"
+    "tests"
   ],
   "dependencies": {
     "angular-loader": "~1.4.7",
