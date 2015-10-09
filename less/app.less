@@ -1,12 +1,13 @@
 @import 'public/libs/bootstrap/less/bootstrap.less';
 
 @navbar-default-bg                  : #996600;
-@navbar-default-link-color          : darken(@navbar-default-bg, 15%);
 
+@dark                               : darken(@navbar-default-bg, 15%);
 @light                              : lighten(@navbar-default-bg, 50%);
 
-@navbar-default-toggle-icon-bar-bg  : @navbar-default-link-color;
-@navbar-default-toggle-border-color : @navbar-default-link-color;
+@navbar-default-link-color          : @light;
+@navbar-default-toggle-icon-bar-bg  : @dark;
+@navbar-default-toggle-border-color : @dark;
 @navbar-default-toggle-hover-bg     : @light;
 
 html,
