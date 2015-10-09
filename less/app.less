@@ -2,13 +2,18 @@
 
 @navbar-default-bg                  : #996600;
 
-@dark                               : darken(@navbar-default-bg, 15%);
-@light                              : lighten(@navbar-default-bg, 50%);
+@dark                               : darken(@navbar-default-bg, 5%);
+@darker                             : darken(@navbar-default-bg, 15%);
+@darkest                            : darken(@navbar-default-bg, 15%);
+@light                              : lighten(@navbar-default-bg, 35%);
 
 @navbar-default-link-color          : @light;
-@navbar-default-toggle-icon-bar-bg  : @dark;
-@navbar-default-toggle-border-color : @dark;
+@navbar-default-toggle-icon-bar-bg  : @darker;
+@navbar-default-toggle-border-color : @darker;
 @navbar-default-toggle-hover-bg     : @light;
+
+@panel-default-heading-bg           : @navbar-default-bg;
+@panel-default-border               : @dark;
 
 html,
 body {
@@ -48,6 +53,10 @@ h1 {
 
 .odd {
     background-color: @light;
+}
+
+.panel-default > .panel-heading {
+    color: @darker;
 }
 
 #footer {
