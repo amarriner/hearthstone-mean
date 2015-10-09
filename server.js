@@ -11,9 +11,6 @@ var port = process.env.PORT || 8080;
 
 app.use('/api/cards', cards);
 app.use(express.static(__dirname + '/public'));
-app.use('/', function(req, res) {
-    res.sendFile('./public/views/index.html', { root: __dirname });
-});
 
 app.listen(port);
 
