@@ -28,6 +28,7 @@ module.exports = {
         'Curse of Naxxramas',
         'Goblins vs Gnomes',
         'Promo',
-        'Reward'
+        'Reward',
+        'The Grand Tournament'
     ]
 };
