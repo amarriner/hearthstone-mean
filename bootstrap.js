@@ -14,6 +14,7 @@ var Card        = require('./app/models/card.js');
 
 var cardSets    = require('./config/enums/card-sets').cardSets;
 var cardTypes   = require('./config/enums/card-types').cardTypes;
+var cardClasses = require('./config/enums/card-classes').cardClasses;
 var factions    = require('./config/enums/factions').factions;
 var races       = require('./config/enums/races').races;
 var rarities    = require('./config/enums/rarities').rarities;
@@ -55,6 +56,10 @@ function updateMongo(j) {
             card._id            = entity['CardID'];
             card.name           = getTagValue(entity['Tag'], 'CardName', 'enUS');
             card.cardSet        = cardSets[getTagValue(entity['Tag'], 'CardSet', 'value')];
+            card.cardClass      = cardClasses[getTagValue(entity['Tag'], 'Class', 'value')];
+            if (typeof card.Class === undefined) {
+                card.cardClass  = 'Neutral';
+            }
             card.collectible    = getTagValue(entity['Tag'], 'Collectible', 'value');
             card.rarity         = rarities[getTagValue(entity['Tag'], 'Rarity', 'value')];
             card.cardType       = cardTypes[getTagValue(entity['Tag'], 'CardType', 'value')];

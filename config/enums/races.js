@@ -20,11 +20,11 @@ module.exports = {
         'Mechanical',
         'Elemental',
         'Ogre',
-        'Pet',
+        'Beast',
         'Totem',
         'Nerubian',
         'Pirate',
         'Dragon',
-        'Beast'
+        'Pet'
     ]
 };

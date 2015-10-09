@@ -1,11 +1,39 @@
 <h1>Cards</h1>
 
+<div class="row">
+    <div class="col-md-3 text-center"><strong>Set</strong></div>
+
+    <div class="col-md-3 text-center"><strong>Class</strong></div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <select ng-model="cardSets" class="form-control">
+            <option></option>
+            <option ng-repeat="set in sets" value="{{set}}">{{set}}</option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select ng-model="cardClasses" class="form-control">
+            <option></option>
+            <option ng-repeat="clazz in classes" value="{{clazz}}">{{clazz}}</option>
+        </select>
+    </div>
+</div>
+
 <div class="container-fluid">
 
-  <div class="row" ng-repeat="card in cards | orderBy: name | filter: cardSet = 'Blackrock Mountain'">
+    <div ng-if="cardSets || cardClasses" ng-repeat="card in cards | filter: { cardSet: cardSets, cardClass: cardClasses } | orderBy: 'name'">
+        <div ng-if="card.collectible && card.cardType != 'Hero'" class="row">
 
-    <div ng-if="card.collectible" class="col-md-2">--{{card.name}}</div>
+            <div class="col-md-2">{{card.name}}</div>
+            <div class="col-md-2">{{card.cardSet}}</div>
+            <div class="col-md-2">{{card.cardClass}}</div>
+            <div class="col-md-2">{{card.cardType}}</div>
+            <div class="col-md-2">{{card.race}}</div>
 
-  </div>
+        </div>
+    </div>
 
 </div>

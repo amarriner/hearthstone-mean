@@ -2,7 +2,7 @@ module.exports = {
     cardSets: [
         'Invalid',
         'Test Temporary',
-        'Core',
+        'Basic',
         'Classic',
         'Reward',
         'Missions',
@@ -20,5 +20,14 @@ module.exports = {
         'Hero Skins',
         'TB',
         'Slush'
+    ],
+    validSets: [
+        'Basic',
+        'Blackrock Mountain',
+        'Classic',
+        'Curse of Naxxramas',
+        'Goblins vs Gnomes',
+        'Promo',
+        'Reward'
     ]
 };

@@ -5,6 +5,7 @@ var CardSchema      = new Schema({
     _id         : String,
     name        : String,
     cardSet     : String,
+    cardClass   : String,
     collectible : Boolean,
     rarity      : String,
     cardType    : String,

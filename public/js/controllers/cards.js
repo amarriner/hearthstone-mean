@@ -9,13 +9,22 @@ angular.module('hearthstone.cards', ['ngRoute'])
     });
 }])
 
-.controller('CardsCtrl', ['$scope', 'Cards',
-    function($scope, Cards) {
+.controller('CardsCtrl', ['$scope', 'Cards', 'Sets', 'Classes',
+    function($scope, Cards, Sets, Classes) {
+
+        Sets.get()
+            .then(function(sets) {
+                $scope.sets = sets.data;
+            });
+
+        Classes.get()
+            .then(function(classes) {
+                $scope.classes = classes.data;
+            });
 
         Cards.get()
             .then(function(cards) {
-                    $scope.cards = cards.data;
-                }
-            )
+                $scope.cards = cards.data;
+            });
     }
 ]);

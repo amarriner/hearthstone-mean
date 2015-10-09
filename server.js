@@ -3,13 +3,18 @@ var app             = express();
 var mongoose        = require('mongoose');
 
 var db              = require('./config/db');
-var cards           = require('./routes/cards');
 
 mongoose.connect(db.url);
 
 var port = process.env.PORT || 8080;
 
-app.use('/api/cards', cards);
+//
+// API Routes
+//
+app.use('/api/classes', require('./routes/card-classes'));
+app.use('/api/sets', require('./routes/card-sets'));
+app.use('/api/cards', require('./routes/cards'));
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port);

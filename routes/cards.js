@@ -5,7 +5,7 @@ var Card    = require('../app/models/card');
 
 router.route('/')
     .get(function(req, res) {
-        Card.find(function(err, cards){
+        Card.find(req.query, function(err, cards){
             if (err) {
                 res.send(err);
             }
