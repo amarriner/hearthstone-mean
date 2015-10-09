@@ -1,18 +1,16 @@
 'use strict';
 
-hearthstoneServices.factory('Cards', ['$resource',
-  function($resource) {
+hearthstoneServices.factory('Cards', ['$http',
+    function($http) {
 
-    var cards = "";
+        return {
+            get: function() {
+                return $http.get('/api/cards')
+                    .success(function(response) {
+                        return response;
+                    })
+                }
+        }
 
-    if (cards == "") {
-      cards = $resource('data/AllSets.json').get();
     }
-
-    return {
-      getCards: function() {
-        return cards;
-      }
-    }
-  }
 ]);

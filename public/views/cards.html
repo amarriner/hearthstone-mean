@@ -1,15 +1,10 @@
 <h1>Cards</h1>
 
-<div>
-  <select ng-model="setSelect" ng-options="key[0].toString() for key in cards">
-  </select>
-</div>
-
 <div class="container-fluid">
 
-  <div class="row" ng-repeat="card in cards['Basic'] | orderBy: 'name'">
+  <div class="row" ng-repeat="card in cards | orderBy: name | filter: cardSet = 'Blackrock Mountain'">
 
-    <div ng-if="card.collectible" class="col-md-2">{{card.name}}</div>
+    <div ng-if="card.collectible" class="col-md-2">--{{card.name}}</div>
 
   </div>
 
