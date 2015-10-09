@@ -1,0 +1,30 @@
+module.exports = {
+    races: [
+        'Invalid',
+        'Blood Elf',
+        'Draenei',
+        'Dwarf',
+        'Gnome',
+        'Goblin',
+        'Human',
+        'Night Elf',
+        'Orc',
+        'Tauren',
+        'Troll',
+        'Undead',
+        'Worgen',
+        'Goblin2',
+        'Murloc',
+        'Demon',
+        'Scourge',
+        'Mechanical',
+        'Elemental',
+        'Ogre',
+        'Pet',
+        'Totem',
+        'Nerubian',
+        'Pirate',
+        'Dragon',
+        'Beast'
+    ]
+};

@@ -4,16 +4,16 @@ var Schema          = mongoose.Schema;
 var CardSchema      = new Schema({
     _id         : String,
     name        : String,
-    cardSet     : Number,
+    cardSet     : String,
     collectible : Boolean,
-    rarity      : Number,
-    cardType    : Number,
+    rarity      : String,
+    cardType    : String,
     cost        : Number,
     flavorText  : String,
     health      : Number,
     atk         : Number,
-    faction     : Number,
-    race        : Number,
+    faction     : String,
+    race        : String,
     gold        : String
 });
 
