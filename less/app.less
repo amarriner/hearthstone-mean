@@ -1,0 +1,56 @@
+@import 'public/libs/bootstrap/less/bootstrap.less';
+
+@navbar-default-bg                  : #996600;
+@navbar-default-link-color          : darken(@navbar-default-bg, 15%);
+
+@light                              : lighten(@navbar-default-bg, 50%);
+
+@navbar-default-toggle-icon-bar-bg  : @navbar-default-link-color;
+@navbar-default-toggle-border-color : @navbar-default-link-color;
+@navbar-default-toggle-hover-bg     : @light;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#content {
+    padding-top: 80px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand > img {
+    margin-top: -15px;
+    z-index: 1000;
+}
+
+.nav > li > a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.odd {
+    background-color: @light;
+}
+
+#footer {
+    .text-right;
+
+    margin-top: 100px;
+}
