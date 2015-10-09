@@ -6793,8 +6793,20 @@ h1 {
   font-size: 18px;
   font-weight: 700;
 }
-.odd {
+.header {
+  background-color: #996600;
+  color: #4d3300;
+  font-weight: 700;
+}
+.even {
   background-color: #ffc34c;
+}
+.row {
+  padding: 3px;
+}
+.sort div {
+  color: #ffc34c;
+  cursor: pointer;
 }
 .panel-default > .panel-heading {
   color: #4d3300;

@@ -28,11 +28,21 @@
     <div class="panel-body">
         <div class="container-fluid">
 
-            <div ng-if="cardSets || cardClasses" ng-repeat="card in cards | filter: { collectible: true, cardType: '!Hero', cardSet: cardSets, cardClass: cardClasses } | orderBy: 'name'">
-                <div class="row" ng-class-odd="'odd'">
+            <div class="row header sort">
+                <div class="col-md-2" ng-click="setOrder('name')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'name'), 'fa-caret-down': (orderBy == '-name')}"></i> Name</div>
+                <div class="col-md-2" ng-click="setOrder('cardSet')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'cardSet'), 'fa-caret-down': (orderBy == '-cardSet')}"></i> Set</div>
+                <div class="col-md-2" ng-click="setOrder('rarity')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'rarity'), 'fa-caret-down': (orderBy == '-rarity')}"></i> Rarity</div>
+                <div class="col-md-2" ng-click="setOrder('cardClass')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'cardClass'), 'fa-caret-down': (orderBy == '-cardClass')}"></i> Class</div>
+                <div class="col-md-2" ng-click="setOrder('cardType')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'cardType'), 'fa-caret-down': (orderBy == '-cardType')}"></i> Type</div>
+                <div class="col-md-2" ng-click="setOrder('race')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'race'), 'fa-caret-down': (orderBy == '-race')}"></i> Race</div>
+            </div>
+
+            <div ng-if="cardSets || cardClasses" ng-repeat="card in cards | filter: { collectible: true, cardType: '!Hero', cardSet: cardSets, cardClass: cardClasses } | orderBy: orderBy">
+                <div class="row" ng-class-even="'even'">
 
                     <div class="col-md-2">{{card.name}}</div>
                     <div class="col-md-2">{{card.cardSet}}</div>
+                    <div class="col-md-2">{{card.rarity}}</div>
                     <div class="col-md-2">{{card.cardClass}}</div>
                     <div class="col-md-2">{{card.cardType}}</div>
                     <div class="col-md-2">{{card.race}}</div>

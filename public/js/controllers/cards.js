@@ -26,5 +26,20 @@ angular.module('hearthstone.cards', ['ngRoute'])
             .then(function(cards) {
                 $scope.cards = cards.data;
             });
+
+        $scope.orderBy = 'name';
+        $scope.setOrder = function(field) {
+            if ($scope.orderBy == field) {
+                if (field[0] == "-") {
+                    $scope.orderBy = field.slice(1);
+                }
+                else {
+                    $scope.orderBy = "-" + field;
+                }
+            }
+            else {
+                $scope.orderBy = field;
+            }
+        }
     }
 ]);
