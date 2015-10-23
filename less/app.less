@@ -1,19 +1,20 @@
 @import 'public/libs/bootstrap/less/bootstrap.less';
 
-@navbar-default-bg                  : #996600;
-
 @dark                               : darken(@navbar-default-bg, 5%);
-@darker                             : darken(@navbar-default-bg, 15%);
-@darkest                            : darken(@navbar-default-bg, 15%);
-@light                              : lighten(@navbar-default-bg, 35%);
+@darker                             : darken(@navbar-default-bg, 5%);
+@darkest                            : darken(@navbar-default-bg, 25%);
+@light                              : lighten(@navbar-default-bg, 5%);
 
-@navbar-default-link-color          : @light;
+@navbar-default-link-color          : @brand-primary;
+
+/*
 @navbar-default-toggle-icon-bar-bg  : @darker;
 @navbar-default-toggle-border-color : @darker;
 @navbar-default-toggle-hover-bg     : @light;
 
 @panel-default-heading-bg           : @navbar-default-bg;
 @panel-default-border               : @dark;
+*/
 
 html,
 body {
@@ -37,18 +38,19 @@ h1 {
     font-weight: 700;
 }
 
-.navbar-brand {
-    font-weight: 700;
-}
-
-.navbar-brand > img {
-    margin-top: -15px;
-    z-index: 1000;
+#brand {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
 }
 
 .nav > li > a {
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 700;
+}
+
+ul.navbar-nav {
+    margin-left: 25px;
 }
 
 .header {
@@ -58,20 +60,24 @@ h1 {
 }
 
 .even {
-    background-color: @light;
+    background-color: @darker;
 }
 
 .row {
     padding: 3px;
 }
 
+.sort {
+    .bg-primary;
+    color: white;
+    border-radius: 3px;
+}
+
 .sort div {
-    color: @light;
     cursor: pointer;
 }
 
 .panel-default > .panel-heading {
-    color: @darker;
 }
 
 #footer {

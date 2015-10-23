@@ -22,6 +22,13 @@
                     <option ng-repeat="clazz in classes" value="{{clazz}}">{{clazz}}</option>
                 </select>
             </div>
+
+            <div class="col-md-3 text-center">
+                <label for="cardName">
+                    <strong>Name</strong>
+                </label>
+                <input type="text" ng-model="cardName" class="form-control">
+            </div>
         </div>
     </div>
 
@@ -37,7 +44,7 @@
                 <div class="col-md-2" ng-click="setOrder('race')"><i class="fa" ng-class="{'fa-caret-up': (orderBy == 'race'), 'fa-caret-down': (orderBy == '-race')}"></i> Race</div>
             </div>
 
-            <div ng-if="cardSets || cardClasses" ng-repeat="card in cards | filter: { collectible: true, cardType: '!Hero', cardSet: cardSets, cardClass: cardClasses } | orderBy: orderBy">
+            <div ng-if="cardSets || cardClasses || cardName" ng-repeat="card in cards | filter: { collectible: true, cardType: '!Hero', cardSet: cardSets, cardClass: cardClasses, name: cardName } | orderBy: orderBy">
                 <div class="row" ng-class-even="'even'">
 
                     <div class="col-md-2">{{card.name}}</div>
