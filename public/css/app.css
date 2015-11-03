@@ -6816,6 +6816,9 @@ ul.navbar-nav {
   font-size: 20px;
   font-weight: 700;
 }
+#deck div.panel-heading a {
+  color: white;
+}
 .header {
   background-color: #f8f8f8;
   color: #ebebeb;

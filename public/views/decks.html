@@ -1,6 +1,11 @@
 <div id="deck" class="panel panel-primary" data-drag="true" jqyoui-draggable="" ng-controller="DecksCtrl" ng-show="showDeck()">
     <div class="panel-heading">
-        Deck
+        <div class="row">
+            <div class="col-md-6">Deck</div>
+            <div class="col-md-6 text-right">
+                <a ng-click="toggleDeck()"><i class="fa fa-minus-square"></i></a>
+            </div>
+        </div>
     </div>
     <div class="panel-body" data-drop="true" jqyoui-droppable="{onDrop: 'dropCard()'}" style="height: 50px;">
 

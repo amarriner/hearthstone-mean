@@ -6,10 +6,7 @@ angular.module('hearthstone.navbar', [])
 
 })
 
-.controller('NavbarCtrl', ['$scope', 'Decks',
-    function($scope, Decks) {
-        $scope.toggleDeck = function() {
-            Decks.toggleShowDeck();
-        }
+.controller('NavbarCtrl', ['$scope',
+    function($scope) {
     }
 ]);

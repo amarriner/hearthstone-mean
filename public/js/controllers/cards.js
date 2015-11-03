@@ -9,8 +9,8 @@ angular.module('hearthstone.cards', ['ngRoute'])
     });
 }])
 
-.controller('CardsCtrl', ['$scope', 'Cards', 'Sets', 'Classes',
-    function($scope, Cards, Sets, Classes) {
+.controller('CardsCtrl', ['$scope', 'Cards', 'Sets', 'Classes', 'Decks',
+    function($scope, Cards, Sets, Classes, Decks) {
 
         Sets.get()
             .then(function(sets) {
@@ -40,6 +40,11 @@ angular.module('hearthstone.cards', ['ngRoute'])
             else {
                 $scope.orderBy = field;
             }
+        }
+
+        $scope.showDeck = Decks.getShowDeck;
+        $scope.toggleDeck = function() {
+            Decks.toggleShowDeck();
         }
     }
 ]);

@@ -3,6 +3,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        jshint: {
+            files: {
+                src: [
+                    'public/js/app.js'
+                ]
+            }
+        },
+
         less: {
             default: {
                 options: {},
@@ -14,5 +22,6 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
 }
