@@ -8,15 +8,10 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "http://bulletriddenlich.com:81",
   "private": true,
   "dependencies": {
-    "angular-loader": "~1.4.7",
-    "angular-resource": "~1.4.7",
-    "font-awesome": "~4.4.0",
-    "html5-boilerplate": "~5.2.0",
-    "modernizr": "~3.1.0",
-    "angular-route": "~1.4.7",
-    "bootstrap": "~3.3.5"
+    "jquery-ui": "~1.11.4",
+    "angular-dragdrop": "~1.0.12"
   }
 }
